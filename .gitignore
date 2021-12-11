@@ -132,5 +132,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Leah's scratch work
+# Skipping for Github commits
 scratch/*
+data/*
