@@ -133,6 +133,5 @@ dmypy.json
 .pyre/
 
 # Skipping for Github commits
-scratch/*
 data/*
 output/*
