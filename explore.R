@@ -23,9 +23,9 @@ s.sm = svd.sm$d
 # plot singular values
 semilogy(1:n, s.sm, main = "All Singular Values", 
          xlab = "Singular Value Index", ylab = "log(Singular Values)")
-semilogy(1:40, s.sm[1:40], main = "Top Singular Values", 
+semilogy(1:50, s.sm[1:50], main = "Top Singular Values", 
          xlab = "Singular Value Index", ylab = "log(Singular Values)")
-
+abline(v = 5.5, col = 'red')
 # we will keep top 5 and reconstruct the CSV:
 r = 5
 data.sm.recon = u.sm[,1:r] %*% diag(s.sm)[1:r,1:r] %*% t(v.sm[,1:r])
