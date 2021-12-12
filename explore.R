@@ -61,7 +61,7 @@ heatmap.2(diffs.std.mat, Rowv = FALSE, Colv = FALSE, dendrogram = 'none',
           margins = c(6,12), col = jet.colors(100), trace = "none", 
           labRow = FALSE, labCol = FALSE, key.title = "Color Key", 
           keysize = 0.9, key.par = list(cex=0.5), key.xlab = "value", 
-          density.info = "none")
+          density.info = "none", main = "Variance of full matrix")
 
 
 # Calculate variance of each pixel (rank 1)
@@ -78,4 +78,4 @@ heatmap.2(diffs.std.mat, Rowv = FALSE, Colv = FALSE, dendrogram = 'none',
           margins = c(6,12), col = jet.colors(100), trace = "none", 
           labRow = FALSE, labCol = FALSE, key.title = "Color Key", 
           keysize = 0.9, key.par = list(cex=0.5), key.xlab = "value", 
-          density.info = "none")
+          density.info = "none", main = "Variance of rank 1 matrix")
