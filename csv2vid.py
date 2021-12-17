@@ -23,6 +23,7 @@ if sys.argv[1:]:
   csv_path = Path(sys.argv[1])
 else:
   csv_path = max(Path().glob('waterfall*.csv.gz'), key=lambda p:p.stat().st_mtime)  # newest!
+  print(f'Converting newest csv: {csv_path}\n')
 
 # Parse size
 vid_width, vid_height = [int(d) for d in re.match(r'.*[_-]([0-9]+)x([0-9]+)[-_\.]', str(csv_path)).groups()]
@@ -30,7 +31,7 @@ print(f'{vid_width}x{vid_height} = {vid_width*vid_height}')
 
 # Get first row, reshape as np matrix, turn into image.
 pixelmat = np.genfromtxt(csv_path,delimiter=',',dtype=np.int16)  # Does it need to be float?  Should I round it?
-print(f'range =', (pixelmat.min(), pixelmat.max()))
+print(f'pixel value range =', (pixelmat.min(), pixelmat.max()))
 pixelmat = pixelmat.clip(min=0,max=255)
 print(f'{pixelmat.shape=}')
 
