@@ -5,7 +5,8 @@ Run it like this:  ./csv2vid.py waterfall-471x265-rank5.csv.gz
 The filename should contain `-{width}x{height}`.
 '''
 
-## requires `pip3 install pillow numpy` and `brew install ffmpeg`
+## requires `pip3 install pillow numpy`
+## requires `brew install ffmpeg` (or download from ffmpeg.org)
 from PIL import Image
 import numpy as np
 import csv, gzip, shutil, re, sys
