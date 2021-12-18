@@ -1,5 +1,8 @@
+.DS_Store
 *.png
 *.csv
+*.gz
+*.mp4
 
 
 # Byte-compiled / optimized / DLL files
@@ -133,6 +136,8 @@ dmypy.json
 .pyre/
 
 # Skipping for Github commits
-scratch/*
 data/*
 output/*
+
+# Additional ignores
+.DS_Store
